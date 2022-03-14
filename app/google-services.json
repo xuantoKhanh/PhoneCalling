@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "164909837877",
+    "project_id": "phonecallnotification-51af2",
+    "storage_bucket": "phonecallnotification-51af2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:164909837877:android:7f6daa227dd538c72b8b7c",
+        "android_client_info": {
+          "package_name": "com.example.phonecalling"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "164909837877-a3lpia1k86b2ktsubij398qgcu9j0cnj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.phonecalling",
+            "certificate_hash": "e9c8330abaebeb0e4a9e06d57732eab2c6769a61"
+          }
+        },
+        {
+          "client_id": "164909837877-cbnc60khnqlp2utgsgfee96ovjfq9n6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACMGXetfu408CMqVTpLQnCWyn7EkUMLBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "164909837877-cbnc60khnqlp2utgsgfee96ovjfq9n6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
