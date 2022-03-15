@@ -5,6 +5,17 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
     <!-- Parent Layout of ImageView -->
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,11 +27,14 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:padding="5dp"
-            android:src="@drawable/noti" />
+            android:src="@drawable/calling" />
     </LinearLayout>
 
     <!-- Parent layout for holding the Title and the Body-->
-    <LinearLayout
+
+
+
+        <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -44,7 +58,33 @@
             android:text="Message"
             />
 
+
+
     </LinearLayout>
+
+    </LinearLayout>
+        <Button
+            android:id="@+id/buttonReject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Reject"
+            android:layout_below="@id/linear1"
+            android:layout_marginLeft="50dp"
+            />
+
+        <Button
+            android:id="@+id/buttonAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:layout_weight="1"
+            android:text="Accept"
+            android:layout_toRightOf="@id/buttonReject"
+            android:layout_marginLeft="100dp"/>
+
+
+    </RelativeLayout>
 
 
 </LinearLayout>

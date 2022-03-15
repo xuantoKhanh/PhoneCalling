@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhoneCalling">
 
+        <activity
+            android:name=".ReceivingCall"
+            android:exported="false"
+            />
+
 <!--        &lt;!&ndash; Set custom default icon. This is used when no icon is set for incoming notification messages.-->
 <!--     See README(https://goo.gl/l4GJaQ) for more. &ndash;&gt;-->
 <!--        <meta-data-->

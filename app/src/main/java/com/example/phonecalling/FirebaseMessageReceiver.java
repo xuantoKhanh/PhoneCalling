@@ -49,13 +49,11 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
         }
 
         // Method to get the custom Design for the display of notification.
-        private RemoteViews getCustomDesign(String title,
-                                            String message) {
-            RemoteViews remoteViews = new RemoteViews(
-                    getApplicationContext().getPackageName(), R.layout.notification);
+        private RemoteViews getCustomDesign(String title, String message) {
+            RemoteViews remoteViews = new RemoteViews(getApplicationContext().getPackageName(), R.layout.notification);
             remoteViews.setTextViewText(R.id.title, title);
             remoteViews.setTextViewText(R.id.message, message);
-            remoteViews.setImageViewResource(R.id.icon, R.drawable.noti);
+            remoteViews.setImageViewResource(R.id.icon, R.drawable.calling);
             return remoteViews;
         }
 
@@ -71,17 +69,15 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             // Pass the intent to PendingIntent to start the
             // next Activity
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent,
-                    PendingIntent.FLAG_ONE_SHOT);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
 
             // Create a Builder object using NotificationCompat
             // class. This will allow control over all the flags
             NotificationCompat.Builder builder = new NotificationCompat
                     .Builder(getApplicationContext(), channel_id)
-                    .setSmallIcon(R.drawable.noti)
+                    .setSmallIcon(R.drawable.calling)
                     .setAutoCancel(true)
                     .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
-                    .setOnlyAlertOnce(true)
                     .setContentIntent(pendingIntent);
 
             // A customized design for the notification can be
@@ -97,7 +93,7 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             else {
                 builder = builder.setContentTitle(title)
                         .setContentText(message)
-                        .setSmallIcon(R.drawable.noti);
+                        .setSmallIcon(R.drawable.calling);
             }
             // Create an object of NotificationManager class to
             // notify the
