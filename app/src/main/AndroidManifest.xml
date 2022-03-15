@@ -13,6 +13,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PhoneCalling">
         <activity
+            android:name=".InComingCallActivity"
+            android:exported="false"
+            />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
