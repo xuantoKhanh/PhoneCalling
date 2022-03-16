@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class ReceivingCall extends AppCompatActivity implements View.OnClickListener {
 
-    private Button bt1, bt2;
+    private Button bt1, bt2, bt3;
 
 
     @Override
@@ -17,16 +17,26 @@ public class ReceivingCall extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.receiving_call);
 
-        bt1 = (Button) findViewById(R.id.button1);
+        bt1 = (Button) findViewById(R.id.buttonReject);
+        bt2 = (Button) findViewById(R.id.buttonAccept);
+        bt3 = (Button) findViewById(R.id.buttonMessage);
         bt1.setOnClickListener(this);
+        bt2.setOnClickListener(this);
+        bt3.setOnClickListener(this);
 
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button1:
+            case R.id.buttonReject:
                 startActivity(new Intent(this, MainActivity.class));
+                break;
+            case R.id.buttonAccept:
+                startActivity(new Intent(this, CallingScreen.class));
+                break;
+            case R.id.buttonMessage:
+                startActivity(new Intent(this, MessageScreen.class));
                 break;
 
         }

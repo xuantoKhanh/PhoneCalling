@@ -5,10 +5,7 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
->
+
 
     <LinearLayout
         android:id="@+id/linear1"
@@ -63,28 +60,5 @@
     </LinearLayout>
 
     </LinearLayout>
-        <Button
-            android:id="@+id/buttonReject"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Reject"
-            android:layout_below="@id/linear1"
-            android:layout_marginLeft="50dp"
-            />
-
-        <Button
-            android:id="@+id/buttonAccept"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linear1"
-            android:layout_weight="1"
-            android:text="Accept"
-            android:layout_toRightOf="@id/buttonReject"
-            android:layout_marginLeft="100dp"/>
-
-
-    </RelativeLayout>
-
 
 </LinearLayout>

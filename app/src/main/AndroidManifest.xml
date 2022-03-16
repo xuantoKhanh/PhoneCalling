@@ -3,9 +3,10 @@
     package="com.example.phonecalling">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
     <application
-
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,17 +18,19 @@
             android:name=".ReceivingCall"
             android:exported="false"
             />
+        <activity
+            android:name=".MessageScreen"
+            android:exported="false"
+            />
+        <activity
+            android:name=".CallingScreen"
+            android:exported="false"
+            />
 
-<!--        &lt;!&ndash; Set custom default icon. This is used when no icon is set for incoming notification messages.-->
-<!--     See README(https://goo.gl/l4GJaQ) for more. &ndash;&gt;-->
-<!--        <meta-data-->
-<!--            android:name="com.google.firebase.messaging.default_notification_icon"-->
-<!--            android:resource="@drawable/doctor" />-->
-<!--        &lt;!&ndash; Set color used with incoming notification messages. This is used when no color is set for the incoming-->
-<!--             notification message. See README(https://goo.gl/6BKBk7) for more. &ndash;&gt;-->
-<!--        <meta-data-->
-<!--            android:name="com.google.firebase.messaging.default_notification_color"-->
-<!--            android:resource="@color/white" />-->
+        <activity
+            android:name=".EndingCall"
+            android:exported="false"
+            />
 
 
         <activity
