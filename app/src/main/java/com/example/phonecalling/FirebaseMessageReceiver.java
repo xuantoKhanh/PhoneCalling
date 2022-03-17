@@ -29,10 +29,10 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             // attributes. Since here we do not have any data
             // payload, This section is commented out. It is
             // here only for reference purposes.
-        if(remoteMessage.getData().size()>0){
+        /*if(remoteMessage.getData().size()>0){
             showNotification(remoteMessage.getData().get("title"),
                           remoteMessage.getData().get("message"));
-        }
+        }*/
 
 
             // Second case when notification payload is
@@ -72,7 +72,8 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
             //startActivity(intent);
             // Pass the intent to PendingIntent to start the
             // next Activity
-            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_ONE_SHOT);
+            PendingIntent pendingIntent = PendingIntent.getActivity(this, 0,
+                    intent, PendingIntent.FLAG_ONE_SHOT);
 
             // Create a Builder object using NotificationCompat
             // class. This will allow control over all the flags
@@ -105,7 +106,8 @@ public class FirebaseMessageReceiver extends FirebaseMessagingService {
 
             // Check if the Android Version is greater than Oreo
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                NotificationChannel notificationChannel = new NotificationChannel(channel_id, "web_app", NotificationManager.IMPORTANCE_HIGH);
+                NotificationChannel notificationChannel = new NotificationChannel(
+                        channel_id, "web_app", NotificationManager.IMPORTANCE_HIGH);
                 notificationManager.createNotificationChannel(notificationChannel);
                 context.startForegroundService(intent);
             }
